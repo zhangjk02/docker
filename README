@@ -8,10 +8,10 @@ docker pull whyour/qinglong:latest
 #v4 部署
 1.
 docker run -dit \
-   -v 目录/jd/config:/jd/config \
-   -v 目录/jd/log:/jd/log \
-   -v 目录/jd/scripts:/jd/scripts \
-   -v 目录/jd/own:/jd/own \
+   -v /home/docker/jd/config:/jd/config \
+   -v /home/docker/jd/log:/jd/log \
+   -v /home/docker/jd/scripts:/jd/scripts \
+   -v /home/docker/jd/own:/jd/own \
    -p 5678:5678 \
    -e ENABLE_HANGUP=true \
    -e ENABLE_WEB_PANEL=true \
@@ -31,10 +31,10 @@ wget -q https://ghproxy.com/https://raw.githubusercontent.com/afwfv/dd/main/v4mb
 #青龙 部署
 1.
 docker run -dit \
-   -v 目录/qinglong/config:/ql/config \
-   -v 目录/qinglong/log:/ql/log \
-   -v 目录/qinglong/scripts:/ql/scripts \
-   -v 目录/qinglong/db:/ql/db \
+   -v /home/docker/qinglong/config:/ql/config \
+   -v /home/docker/qinglong/log:/ql/log \
+   -v /home/docker/qinglong/scripts:/ql/scripts \
+   -v /home/docker/qinglong/db:/ql/db \
    -p 5700:5700 \
    -e ENABLE_HANGUP=true \
    -e ENABLE_WEB_PANEL=true \
