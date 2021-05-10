@@ -1,8 +1,11 @@
+#安装docker
+sudo curl -sSL get.docker.com | sh
+
 #拉取镜像
-Docker pull nevinee/jd:v4
+docker pull nevinee/jd:v4  
+docker pull whyour/qinglong:latest
 
-
-#nevinee部署
+#v4 部署
 1.
 docker run -dit \
    -v 目录/jd/config:/jd/config \
@@ -18,14 +21,14 @@ docker run -dit \
    --restart always \
    nevinee/jd:v4
 2.
-#v4更新
-
+#v4 更新
+docker exec -it jd bash jup
 3.
-#面板搭建
+#v4 面板搭建
 docker exec -it jd bash
-wgehttps://ghproxy.com/https://raw..githubusercontent.com/afwfv/dd/main/v4mb.sh
+wget -q https://ghproxy.com/https://raw.githubusercontent.com/afwfv/dd/main/v4mb.sh -O v4mb.sh && chmod +x v4mb.sh && ./v4mb.sh
 
-#青龙部署
+#青龙 部署
 1.
 docker run -dit \
    -v 目录/qinglong/config:/ql/config \
@@ -40,9 +43,10 @@ docker run -dit \
    --restart always \
    whyour/qinglong:latest
 2.
-#更新青龙
+#青龙更新
 docker exec -it qinglong bash git_pull
-3.
+
 #面板
-ip:5700
+ip:5700  #青龙
+ip:5678  #v4
 
