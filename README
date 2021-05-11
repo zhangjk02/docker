@@ -6,7 +6,7 @@ docker pull nevinee/jd:v4
 docker pull whyour/qinglong:latest
 
 #删除
-删除容器  docker rm 容器名称
+删除容器  docker rm 容器id
 删除镜像  docker rmi 镜像id   
 
 #v4 部署
